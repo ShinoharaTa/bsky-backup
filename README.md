@@ -19,7 +19,10 @@ userlist.jsonを編集する
 
 ## 実行
 
+```
 node all.js
+node laps.js [minutes]
+```
 
 ## node version
 
