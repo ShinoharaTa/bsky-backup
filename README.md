@@ -1,10 +1,15 @@
-# Blueskyの全投稿をバックアップします
+# bsky-backup
 
-## 初回セットアップ
+ユーザーの投稿内容を全てバックアップします。
 
-```
-npm install  
-cp app/userlist.sample.json app/userlist.json
+## 実行手順
+
+実行にあたってはuserlist.sample.jsonを書き換えてください
+以下の手順でデプロイします
+
+```bash
+npm install
+cp userlist.sample.json userlist.json
 ```
 
 userlist.jsonを編集する
@@ -17,13 +22,20 @@ userlist.jsonを編集する
 ]
 ```
 
-## 実行
+### 全件バックアップ
 
-```
+```bash
 node all.js
+```
+
+### 一定時間ごとの差分
+
+```bash
 node laps.js [minutes]
 ```
 
-## node version
+## docker環境
 
-v18
+https://github.com/ShinoharaTa/node-docker
+
+使用方法はリポジトリの説明を読んで下さい
